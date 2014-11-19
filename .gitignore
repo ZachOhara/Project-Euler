@@ -14,12 +14,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Eclipse Workspace files
-.metadata/
-.settings/
-.classpath
-.project
-
 # Git Files
 .gitattributes
 

@@ -1,6 +1,6 @@
 package problems;
 
-import resources.NumberWord;
+import common.NumberWord;
 
 public class Problem017 {
 

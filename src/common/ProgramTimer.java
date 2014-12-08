@@ -10,7 +10,7 @@ public class ProgramTimer {
 	
 	public static void displayTime() {
 		long stopTime = System.currentTimeMillis();
-		System.out.println(String.format("%.2f", ((double)(stopTime - programStart)/1000)) + " seconds");
+		System.out.println(String.format("%.3f", ((double)(stopTime - programStart)/1000)) + " seconds");
 	}
 	
 }

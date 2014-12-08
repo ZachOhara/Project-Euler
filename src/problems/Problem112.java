@@ -10,11 +10,10 @@ public class Problem112 {
 		WriteFile.create("non-bouncy nums");
 		int tried = 0;
 		int found = 0;
-		while ((double)found/tried != 0.99) { //  && tried < 100
+		while ((double)found/tried != 0.99) {
 			tried++;
-			if (isBouncy(tried))// {
+			if (isBouncy(tried))
 				found++;
-			//System.out.println(found + " of " + tried + " is " + ((double)found/tried));
 		}
 		System.out.println("99% of bouncy numbers under " + tried + " are bouncy");
 		ProgramTimer.displayTime();

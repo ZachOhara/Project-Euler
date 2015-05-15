@@ -1,0 +1,58 @@
+package common;
+
+import java.math.BigInteger;
+
+public class MathUtil {
+	
+	public static void main(String[] args) {
+		int[] tests = {1, 2, 3, 10, 12, 15, 100, 1381, 894890};
+		for (int i : tests)
+			System.out.println(i + " : " + length(i));
+	}
+
+	public static boolean isPrime(int n) {
+		for (int i = 2; i <= (n/2) + 1; i++) {
+			if (n % i == 0)
+				return false;
+		}
+		return true;
+	}
+
+	public static int length(int n) {
+		n = Math.abs(n);
+		int length = 0;
+		while (n != 0) {
+			n /= 10;
+			length++;
+		}
+		return length;
+	}
+	
+	public static int sumDigits(int n) {
+		int sum = 0;
+		while (n > 0) {
+			sum += n % 10;
+			n /= 10;
+		}
+		return sum;
+	}
+
+	public static BigInteger sumDigits(BigInteger bi) {
+		BigInteger sum = BigInteger.ZERO;
+		while (bi.compareTo(BigInteger.ZERO) > 0) {
+			sum = sum.add(bi.mod(BigInteger.TEN));
+			bi = bi.divide(BigInteger.TEN);
+		}
+		return sum;
+	}
+
+	public static int countFactors(int n) {
+		n = Math.abs(n);
+		int count = 0;
+		for (int i = 1; i <= n; i++)
+			if (n % i == 0)
+				count++;
+		return count;
+	}
+
+}

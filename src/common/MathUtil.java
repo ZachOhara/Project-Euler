@@ -37,6 +37,15 @@ public class MathUtil {
 		return length;
 	}
 	
+	public static int[] getDigits(int n) {
+		int[] digits = new int[length(n)];
+		for (int i = digits.length - 1; i >= 0; i--) {
+			digits[i] = n % 10;
+			n /= 10;
+		}
+		return digits;
+	}
+	
 	public static int sumDigits(int n) {
 		int sum = 0;
 		while (n > 0) {

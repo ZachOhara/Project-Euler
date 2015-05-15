@@ -28,6 +28,15 @@ public class MathUtil {
 		return length;
 	}
 	
+	public static int length(BigInteger bi) {
+		int length = 0;
+		while (bi.compareTo(BigInteger.ZERO) > 0) {
+			bi = bi.divide(BigInteger.TEN);
+			length++;
+		}
+		return length;
+	}
+	
 	public static int sumDigits(int n) {
 		int sum = 0;
 		while (n > 0) {

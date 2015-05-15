@@ -4,7 +4,6 @@ public class Permutation {
 
 	public static void main(String[] args) {
 		System.out.println(permutations("", "1234", 0));
-		// "RRRRRRRRRRRRRRRRRRRRDDDDDDDDDDDDDDDDDDDD"
 	}
 	
 	public static int permutations(String prefix, String str, int permutationsBefore) {

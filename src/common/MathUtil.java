@@ -5,9 +5,9 @@ import java.math.BigInteger;
 public class MathUtil {
 	
 	public static void main(String[] args) {
-		int[] tests = {1, 2, 3, 10, 12, 15, 100, 1381, 894890};
+		int[] tests = {220, 284};
 		for (int i : tests)
-			System.out.println(i + " : " + length(i));
+			System.out.println(i + " : " + sumDivisors(i));
 	}
 
 	public static boolean isPrime(int n) {
@@ -53,6 +53,14 @@ public class MathUtil {
 			if (n % i == 0)
 				count++;
 		return count;
+	}
+	
+	public static int sumDivisors(int n) {
+		int sum = 0;
+		for (int i = 1; i < n; i++)
+			if (n % i == 0)
+				sum += i;
+		return sum;
 	}
 
 }

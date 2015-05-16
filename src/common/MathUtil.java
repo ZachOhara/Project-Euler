@@ -5,12 +5,14 @@ import java.math.BigInteger;
 public class MathUtil {
 	
 	public static void main(String[] args) {
-		int[] tests = {220, 284};
-		for (int i : tests)
-			System.out.println(i + " : " + sumDivisors(i));
+		String[] tests = {"abcde", "abcba", "abba", "jfjfjjfjfj"};
+		for (String i : tests)
+			System.out.println(i + " : " + isPalindromic(i));
+		
 	}
 
 	public static boolean isPrime(int n) {
+		n = Math.abs(n);
 		for (int i = 2; i <= (n/2) + 1; i++) {
 			if (n % i == 0)
 				return false;
@@ -85,6 +87,18 @@ public class MathUtil {
 		if (n <= 1)
 			return 1;
 		return n * factorial(n - 1);
+	}
+	
+	@Deprecated
+	public static boolean isPalindromic(int n) {
+		return isPalindromic(new Integer(n).toString());
+	}
+	
+	public static boolean isPalindromic(String s) {
+		for (int i = 0; i < s.length() / 2; i++)
+			if (!s.substring(i, i + 1).equals(s.substring(s.length() - 1 - i, s.length() - i)))
+				return false;
+		return true;
 	}
 
 }

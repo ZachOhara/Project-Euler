@@ -1,9 +1,9 @@
 package common;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class ScannerReadFile {
 
@@ -12,7 +12,7 @@ public class ScannerReadFile {
 		for (int i = 0; i < file.length; i++)
 			System.out.println(file[i]);
 	}
-	
+
 	public static String[] getFile(String address) {
 		File f = new File(address);
 		ArrayList<String> output = new ArrayList<String>();
@@ -28,5 +28,5 @@ public class ScannerReadFile {
 		}
 		return output.toArray(new String[output.size()]);
 	}
-	
+
 }

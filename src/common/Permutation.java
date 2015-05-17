@@ -5,7 +5,7 @@ public class Permutation {
 	public static void main(String[] args) {
 		System.out.println(permutations("", "1234", 0));
 	}
-	
+
 	public static int permutations(String prefix, String str, int permutationsBefore) {
 		int n = str.length();
 		int currentPermutations = 0;
@@ -19,5 +19,5 @@ public class Permutation {
 		}
 		return currentPermutations;
 	}
-	
+
 }

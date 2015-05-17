@@ -18,11 +18,11 @@ public class Problem037 {
 		}
 		System.out.println(sum);
 	}
-	
+
 	public static boolean isTruncatable(int n) {
 		return isTruncatableRtoL(n) && isTruncatableLtoR(n);
 	}
-	
+
 	public static boolean isTruncatableRtoL(int n) {
 		while (n > 0) {
 			if (!MathUtil.isPrime(n))
@@ -31,7 +31,7 @@ public class Problem037 {
 		}
 		return true;
 	}
-	
+
 	public static boolean isTruncatableLtoR(int n) {
 		while (n > 0) {
 			if (!MathUtil.isPrime(n))

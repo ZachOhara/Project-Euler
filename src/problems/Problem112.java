@@ -20,11 +20,11 @@ public class Problem112 {
 		ProgramTimer.displayTime();
 
 	}
-	
+
 	public static boolean isBouncy(int n) {
 		return !(isIncreasing(n) || isDecreasing(n));
 	}
-	
+
 	public static boolean isIncreasing(int n) {
 		int[] digits = getDigitArray(n);
 		for (int i = 0; i < digits.length - 1; i++)
@@ -32,7 +32,7 @@ public class Problem112 {
 				return false;
 		return true;
 	}
-	
+
 	public static boolean isDecreasing(int n) {
 		int[] digits = getDigitArray(n);
 		for (int i = 0; i < digits.length - 1; i++)
@@ -40,7 +40,7 @@ public class Problem112 {
 				return false;
 		return true;
 	}
-	
+
 	public static int[] getDigitArray(int n) {
 		int len = MathUtil.length(n);
 		int[] digits = new int[len];

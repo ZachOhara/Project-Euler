@@ -3,12 +3,22 @@ package common;
 import java.math.BigInteger;
 
 public class MathUtil {
-	
+
 	public static void main(String[] args) {
 		String[] tests = {"abcde", "abcba", "abba", "jfjfjjfjfj"};
 		for (String i : tests)
 			System.out.println(i + " : " + isPalindromic(i));
-		
+
+	}
+
+	public static int gcd(int a, int b) {
+		a = Math.abs(a);
+		b = Math.abs(b);
+		int gcd = 1;
+		for (int i = 2; i <= Math.min(a, b); i++)
+			if (a % i == 0 && b % i == 0)
+				gcd = i;
+		return gcd;
 	}
 
 	public static boolean isPrime(int n) {
@@ -29,7 +39,7 @@ public class MathUtil {
 		}
 		return length;
 	}
-	
+
 	public static int length(BigInteger bi) {
 		int length = 0;
 		while (bi.compareTo(BigInteger.ZERO) > 0) {
@@ -38,7 +48,7 @@ public class MathUtil {
 		}
 		return length;
 	}
-	
+
 	public static int[] getDigits(int n) {
 		int[] digits = new int[length(n)];
 		for (int i = digits.length - 1; i >= 0; i--) {
@@ -47,7 +57,7 @@ public class MathUtil {
 		}
 		return digits;
 	}
-	
+
 	public static int sumDigits(int n) {
 		int sum = 0;
 		while (n > 0) {
@@ -74,7 +84,7 @@ public class MathUtil {
 				count++;
 		return count;
 	}
-	
+
 	public static int sumDivisors(int n) {
 		int sum = 0;
 		for (int i = 1; i < n; i++)
@@ -82,18 +92,18 @@ public class MathUtil {
 				sum += i;
 		return sum;
 	}
-	
+
 	public static int factorial(int n) {
 		if (n <= 1)
 			return 1;
 		return n * factorial(n - 1);
 	}
-	
+
 	@Deprecated
 	public static boolean isPalindromic(int n) {
 		return isPalindromic(new Integer(n).toString());
 	}
-	
+
 	public static boolean isPalindromic(String s) {
 		for (int i = 0; i < s.length() / 2; i++)
 			if (!s.substring(i, i + 1).equals(s.substring(s.length() - 1 - i, s.length() - i)))

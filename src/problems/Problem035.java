@@ -3,7 +3,7 @@ package problems;
 import common.MathUtil;
 
 public class Problem035 {
-	
+
 	public static void main(String[] args) {
 		int total = 0;
 		for (int i = 1; i < 1000000; i++) {
@@ -14,7 +14,7 @@ public class Problem035 {
 		}
 		System.out.println(total);
 	}
-	
+
 	public static boolean isCircularPrime(int n) {
 		int len = MathUtil.length(n);
 		for (int i = 0; i < len; i++) {
@@ -24,7 +24,7 @@ public class Problem035 {
 		}
 		return true;
 	}
-	
+
 	public static int rotate(int n) {
 		int last = n % 10;
 		n /= 10;

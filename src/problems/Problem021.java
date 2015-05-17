@@ -3,7 +3,7 @@ package problems;
 import common.MathUtil;
 
 public class Problem021 {
-	
+
 	public static void main(String[] args) {
 		int sum = 0;
 		for (int a = 1; a < 10000; a++) {
@@ -16,7 +16,7 @@ public class Problem021 {
 		}
 		System.out.println(sum);
 	}
-	
+
 	public static boolean areAmicable(int a, int b) {
 		return MathUtil.sumDivisors(a) == b
 				&& MathUtil.sumDivisors(b) == a;

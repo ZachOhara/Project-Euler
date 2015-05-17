@@ -1,11 +1,11 @@
 package common;
 
 public class OharaMath {
-	
+
 	public static int signum(int i) {
 		return (int)Math.signum((double)i);
 	}
-	
+
 	public static int gcd(int a, int b) { // greatest common divisor of two numbers
 		a = Math.abs(a);
 		b = Math.abs(b);

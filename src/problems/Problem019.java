@@ -16,7 +16,7 @@ public class Problem019 {
 		}
 		System.out.println(firstSundays);
 	}
-	
+
 	public static void progressDay() {
 		weekday++;
 		day++;
@@ -28,7 +28,7 @@ public class Problem019 {
 			progressMonth();
 		}
 	}
-	
+
 	public static void progressMonth() {
 		month++;
 		if (month > 12) {

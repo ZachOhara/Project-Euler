@@ -18,7 +18,7 @@ public class Problem007 {
 		}
 		System.out.println("" + n + MathUtil.isPrime(n));
 	}
-	
+
 	public static void isPrime_test() {
 		System.out.println(MathUtil.isPrime(3));
 		System.out.println(MathUtil.isPrime(4));

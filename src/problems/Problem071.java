@@ -1,7 +1,7 @@
 package problems;
 
 public class Problem071 {
-	
+
 	public static void main(String[] args) {
 		double requiredDecimal = 3.0/7;
 		int requiredNumerator = (int)(requiredDecimal * 1000000);

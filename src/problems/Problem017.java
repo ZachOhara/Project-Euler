@@ -3,16 +3,16 @@ package problems;
 import java.util.HashMap;
 
 public class Problem017 {
-	
+
 	public static HashMap<Integer, String> numWords;
-	
-//	public static void main(String[] args) {
-//		initNumWords();
-//		int[] tests = {1, 2, 3, 4, 5, 342, 115};
-//		for (int i : tests)
-//			System.out.println(i + " : " + getNumberWord(i));
-//	}
-	
+
+	//	public static void main(String[] args) {
+	//		initNumWords();
+	//		int[] tests = {1, 2, 3, 4, 5, 342, 115};
+	//		for (int i : tests)
+	//			System.out.println(i + " : " + getNumberWord(i));
+	//	}
+
 	public static void main(String[] args) {
 		initNumWords();
 		int sum = 0;
@@ -21,7 +21,7 @@ public class Problem017 {
 		sum += "onethousand".length();
 		System.out.println(sum);
 	}
-	
+
 	public static String getNumberWord(int n) {
 		String word = "";
 		if (n >= 100) {
@@ -37,7 +37,7 @@ public class Problem017 {
 		}
 		return word;
 	}
-	
+
 	public static void initNumWords() {
 		numWords = new HashMap<Integer, String>();
 		numWords.put(0, "");
@@ -78,7 +78,7 @@ public class Problem017 {
 	public static void main(String[] args) {
 		attempt2();
 	}
-	
+
 	public static void attempt1() {
 		NumberWord[] numbers = new NumberWord[1001];
 		for (int i = 1; i <= 1000; i++) {
@@ -90,7 +90,7 @@ public class Problem017 {
 		}
 		System.out.println(sum);
 	}
-	
+
 	public static void attempt2() {
 		int sum = 0;
 		for (int i = 1; i<= 1000; i++) {
@@ -98,7 +98,7 @@ public class Problem017 {
 		}
 		System.out.println(sum);
 	}
-	
+
 	public static int lengthOf(int n) {
 		if (n == 1000) {
 			return "onethousand".length();
@@ -111,8 +111,8 @@ public class Problem017 {
 		} else {
 			return (ones[n/100] + "hundredand").length() + lengthOf(n%10);
 		}
-			
+
 	}
-	*/
+	 */
 
 }

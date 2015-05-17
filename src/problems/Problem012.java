@@ -3,7 +3,7 @@ package problems;
 import common.MathUtil;
 
 public class Problem012 {
-	
+
 	public static void main(String[] args) {
 		int cumul = 1;
 		int curr = 1;

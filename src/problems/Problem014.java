@@ -13,7 +13,7 @@ public class Problem014 {
 		}
 		System.out.println("The collatz sequence of " + maxIndex + " has " + maxCollatz + " terms");
 	}
-	
+
 	public static int collatz(int n0) {
 		int l = 0;
 		long n = (long)(n0);

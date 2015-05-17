@@ -11,7 +11,7 @@ public class Problem036 {
 				sum += i;
 		System.out.println(sum);
 	}
-	
+
 	public static boolean isFullPalindrome(int n) {
 		return MathUtil.isPalindromic("" + n)
 				&& MathUtil.isPalindromic(Integer.toBinaryString(n));

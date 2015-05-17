@@ -13,7 +13,7 @@ public class Problem034 {
 			}
 		}
 	}
-	
+
 	public static int factorialDigitSum(int n) {
 		int sum = 0;
 		int[] digits = MathUtil.getDigits(n);

@@ -7,18 +7,18 @@ import java.math.RoundingMode;
 import common.ProgramTimer;
 
 public class Problem113 {
-	
+
 	public static void main(String[] args) {
 		ProgramTimer.startTimer(); // just so eclipse is happy
-		
+
 		BigInteger sampleTime = new BigInteger("6463"); // seconds to calculate up to 10^10
 		BigInteger multiplier = new BigInteger("10").pow(90);
 		BigInteger finalTime = sampleTime.multiply(multiplier);
-		
+
 		final BigInteger sixty = new BigInteger("60");
 		final BigInteger earthAge = new BigInteger("454").pow(7);
 		final BigInteger universeAge = new BigInteger("13798").pow(6);
-		
+
 		System.out.println("Using this program to calculate the result would take:");
 		System.out.println(finalTime + " seconds");
 		finalTime = finalTime.divide(sixty);
@@ -38,25 +38,25 @@ public class Problem113 {
 		System.out.println(finalTime + " centuries");
 		finalTime = finalTime.divide(BigInteger.TEN);
 		System.out.println(finalTime + " millenia");
-		
+
 		System.out.println("\nSince the Earth is about " + earthAge + " years old,");
 		System.out.println("And the universe is about " + universeAge + " years old,");
 		System.out.println("This program would finish in about" + years.divide(earthAge) + " Earth's ages");
 		System.out.println("Or about " + years.divide(universeAge) + " times the age of the universe");
-		
+
 		System.out.println();
 		System.out.println("That's about 2.97 * 10^" + (years.divide(universeAge).toString().length()-1) + " universe ages");
 	}
-	
+
 	/*
 	public static void main(String[] args) {
 		ProgramTimer.startTimer();
-		
+
 		BigInteger found = new BigInteger("0");
 		final BigInteger googol = (new BigInteger("10")).pow(7);
 		final BigInteger printinterval = (new BigInteger("10")).pow(6);
 		//BigInteger[] remainder;
-		
+
 		for (BigInteger tried = new BigInteger("1"); tried.compareTo(googol) < 0; tried = tried.add(BigInteger.ONE)) {
 			if (!isBouncy(tried))
 				found = found.add(BigInteger.ONE);
@@ -66,16 +66,16 @@ public class Problem113 {
 		System.out.println("There are " + found + " non-bouncy numbers below a googol");
 		ProgramTimer.displayTime();
 	}
-	*/
-	
+	 */
+
 	public static double currentPercent(BigInteger a, BigInteger b) {
 		return (new BigDecimal(a)).divide(new BigDecimal(b), 10, RoundingMode.DOWN).doubleValue();
 	}
-	
+
 	public static boolean isBouncy(BigInteger n) {
 		return !(isIncreasing(n) || isDecreasing(n));
 	}
-	
+
 	public static boolean isIncreasing(BigInteger n) {
 		int[] digits = getDigitArray(n);
 		for (int i = 0; i < digits.length - 1; i++)
@@ -83,7 +83,7 @@ public class Problem113 {
 				return false;
 		return true;
 	}
-	
+
 	public static boolean isDecreasing(BigInteger n) {
 		int[] digits = getDigitArray(n);
 		for (int i = 0; i < digits.length - 1; i++)
@@ -91,7 +91,7 @@ public class Problem113 {
 				return false;
 		return true;
 	}
-	
+
 	public static int[] getDigitArray(BigInteger n) {
 		String str = n.toString();
 		int[] digits = new int[str.length()];
@@ -100,7 +100,7 @@ public class Problem113 {
 		}
 		return digits;
 	}
-	
+
 	public static int length(int n) {
 		n = Math.abs(n);
 		int len = 0;
@@ -110,5 +110,5 @@ public class Problem113 {
 		}
 		return len;
 	}
-	
+
 }

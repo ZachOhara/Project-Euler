@@ -11,7 +11,5 @@ public class Problem016 {
 		BigInteger digitSum = MathUtil.sumDigits(n);
 		System.out.println(digitSum);
 	}
-	
-	
 
 }

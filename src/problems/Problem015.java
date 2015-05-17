@@ -1,7 +1,7 @@
 package problems;
 
 public class Problem015 {
-	
+
 	/*
 	 * This problem can be easily solved with a simple expression
 	 * Just use permutation with indistinguishable elements
@@ -22,7 +22,7 @@ public class Problem015 {
 	 *  
 	 *  The correct answer is 137846528820
 	 */
-	
+
 	public static void main(String[] args) {
 		System.out.print("See source comments for solution");
 	}

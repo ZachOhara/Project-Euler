@@ -1,7 +1,7 @@
 package problems;
 
 public class Problem018 {
-	
+
 	public static String[] triangle = {"75",
 		"95 64",
 		"17 47 82",
@@ -16,16 +16,16 @@ public class Problem018 {
 		"70 11 33 28 77 73 17 78 39 68 17 57",
 		"91 71 52 38 17 14 91 43 58 50 27 29 48",
 		"63 66 04 68 89 53 67 30 73 16 69 87 40 31",
-		"04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"};
-	
+	"04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"};
+
 	public static int[][] triangleInt;
 	public static int[][] sums;
-	
+
 	public static void main(String[] args) {
 		getIntArray();
 		mainProcedure();
 	}
-	
+
 	public static void getIntArray() {
 		triangleInt = new int[triangle.length][triangle.length];
 		int[] row;
@@ -41,7 +41,7 @@ public class Problem018 {
 			System.out.println(toString(row));
 		}
 	}
-	
+
 	public static void mainProcedure() {
 		// initialize sums[][]
 		sums = new int[triangle.length][triangle.length];
@@ -49,12 +49,12 @@ public class Problem018 {
 			int[] row = new int[triangleInt[i].length];
 			sums[i] = row;
 		}
-		
+
 		/*debugging output:
 		for (int i = 0; i < sums.length; i++)
 			System.out.print(sums[i].length + ", ");
 		System.out.println();*/
-		
+
 		// the last row of sums will be equal to the last row of triInt
 		sums[sums.length-1] = triangleInt[triangleInt.length-1];
 		for (int i = triangle.length - 1; i > 0; i--) {
@@ -64,14 +64,14 @@ public class Problem018 {
 		System.out.println("The largest sum is " + sums[0][0]);
 		System.out.println();
 	}
-	
+
 	public static void assimilateSums(int level) {
 		for (int i = 0; i < sums[level].length; i++) {
 			int bestPath = Math.max(sums[level+1][i], sums[level+1][i+1]);
 			sums[level][i] = bestPath + triangleInt[level][i];
 		}
 	}
-	
+
 	public static String toString(int[] n) {
 		String str = "";
 		for (int i = 0; i < n.length; i++) {
@@ -79,5 +79,5 @@ public class Problem018 {
 		}
 		return str;
 	}
-	
+
 }

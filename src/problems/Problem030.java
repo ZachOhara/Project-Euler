@@ -3,7 +3,7 @@ package problems;
 import common.MathUtil;
 
 public class Problem030 {
-	
+
 	// NOTE: The upper bound of the loop is Integer.MAX_VALUE, but as
 	// you'll see, it finishes quickly on its own.
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Problem030 {
 			}
 		}
 	}
-	
+
 	public static int getSumFifth(int[] arr) {
 		int sum = 0;
 		for (int i : arr) {

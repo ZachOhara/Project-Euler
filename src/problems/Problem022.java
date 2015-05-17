@@ -7,7 +7,7 @@ import java.util.Hashtable;
 import common.ScannerReadFile;
 
 public class Problem022 {
-	
+
 	public static Hashtable<String, Integer> letterValues = new Hashtable<String, Integer>();
 
 	public static void main(String[] args) {
@@ -15,13 +15,13 @@ public class Problem022 {
 		String allNames = ScannerReadFile.getFile("resource/p022_names.txt")[0];
 		//System.out.println(allNames.length());
 		//System.out.println(allNames.toString());
-		
+
 		String[] namesArray = separateNames(allNames);
 		System.out.println(namesArray.length);
 		// sort names array alphabetically
 		Arrays.sort(namesArray);
 		System.out.println(Arrays.toString(namesArray));
-		
+
 		long total = 0;
 		int currentScore;
 		for (int i = 0; i < namesArray.length; i++) {
@@ -34,7 +34,7 @@ public class Problem022 {
 		}
 		System.out.println(total);
 	}
-	
+
 	public static String[] separateNames(String allnames) {
 		ArrayList<String> names = new ArrayList<String>();
 		int i = 0;
@@ -52,7 +52,7 @@ public class Problem022 {
 		}
 		return names.toArray(new String[names.size()]);
 	}
-	
+
 	public static void populateLetters() {
 		letterValues.put("a", 1);
 		letterValues.put("b", 2);

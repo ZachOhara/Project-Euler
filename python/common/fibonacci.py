@@ -1,4 +1,4 @@
-import sequence
+from common import sequence
 
 def main():
 	print(fibonacciTo(100))

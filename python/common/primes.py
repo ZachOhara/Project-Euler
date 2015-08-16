@@ -1,4 +1,4 @@
-import mathutil
+from common import mathutil
 
 def main():
 	print()

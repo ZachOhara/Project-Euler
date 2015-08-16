@@ -1,26 +1,3 @@
-import primes
-
-def factorsOf(n):
-	if n == 1:
-		return [1]
-	factorList = []
-	div = 1
-	while not div in factorList:
-		if n % div == 0:
-			factorList.append(div)
-			if div ** 2 != n:
-				factorList.append(int(n / div))
-		div += 1
-	return factorList
-
-def primeFactorsOf(n):
-	primeFactorList = factorsOf(n)
-	primeFactorList.remove(1)
-	primeFactorList.remove(n)
-	for i in primeFactorList[::-1]:
-		if not primes.isPrime(i):
-			primeFactorList.remove(i)
-	return primeFactorList
 
 def containsFactor(itr, n):
 	for i in itr:
@@ -30,14 +7,14 @@ def containsFactor(itr, n):
 
 def isPalindrome(x):
 	return str(x) == str(x)[::-1]
-
-def generateTriangleNumbers():
-	tri = 0
-	i = 1
-	while True:
-		tri += i
-		yield tri
-		i += 1
+	
+def isPythagorean(itr):
+	if len(itr) != 3:
+		return False
+	c = max(itr)
+	itr.remove(c)
+	a, b, = itr
+	return a ** 2 + b ** 2 == c ** 2
 		
 def collatzSequence(n):
 	seq = [n]

@@ -1,10 +1,11 @@
-import common.MathUtil as MathUtil
+from common import factors
+from common import trianglenums
 
 def main():
-	for i in MathUtil.generateTriangleNumbers():
-		#if i % 100 == 0:
+	for i in trianglenums.triangleNumbers():
+		#if i % 1000 == 0:
 			#print(i)
-		if len(MathUtil.factorsOf(i)) > 500:
+		if len(factors.factorsOf(i)) > 500:
 			print(i)
 			break
 

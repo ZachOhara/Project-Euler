@@ -1,8 +1,7 @@
-import common.MathUtil as MathUtil
+from common import factors
 
-def largestPrimeFactorOf(n):
-	primeList = MathUtil.primeFactorsOf(n)
-	primeList.sort()
-	return primeList[-1]
+def main():
+	print(max(factors.primeFactorsOf(600851475143)))
 
-print(largestPrimeFactorOf(600851475143))
+if __name__ == "__main__":
+	main()

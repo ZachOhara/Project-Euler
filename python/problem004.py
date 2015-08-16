@@ -1,10 +1,10 @@
-import common.MathUtil as MathUtil
+from common import mathutil
 
 def main() :
 	palindromes = []
 	for i in range(100, 1000):
 		for j in range(100, 1000):
-			if MathUtil.isPalindrome(i * j):
+			if mathutil.isPalindrome(i * j):
 				palindromes.append(i * j)
 	print(max(palindromes))
 	

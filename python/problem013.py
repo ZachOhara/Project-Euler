@@ -1,15 +1,9 @@
-
-FILE_ADDRESS = "../res/problem013/numbers.txt"
+from common import fileio
 
 def main():
-	nums = generateNumbersList()
+	fileio.FILE_ADDRESS = "../res/problem013/numbers.txt"
+	nums = fileio.readFileAsList()
 	print(str(sum(nums))[:10])
-
-def generateNumbersList():
-	nums = []
-	for line in open(FILE_ADDRESS, 'r'):
-		nums.append(int(line[:-1]))
-	return nums
 
 if __name__ == '__main__':
 	main()

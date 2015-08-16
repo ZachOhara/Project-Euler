@@ -1,7 +1,7 @@
-import common.MathUtil as MathUtil
+from common import primes
 
 def main():
-	print(sum(MathUtil.primesTo(2000000)))
+	print(sum(primes.primesTo(2000000)))
 
 if __name__ == '__main__':
 	main()

@@ -1,16 +1,9 @@
-
-FILE_ADDRESS = "../res/problem008/series.txt"
+from common import fileio
 
 def main():
-	series = generateSeries()
+	fileio.FILE_ADDRESS = "../res/problem008/series.txt"
+	series = fileio.readFileAsSequence()
 	print(max(adjProducts(series, 13)))
-
-def generateSeries():
-	series = []
-	for line in open(FILE_ADDRESS, 'r'):
-		for char in line[:-1]:
-			series.append(int(char))
-	return series
 
 def adjProducts(series, adj):
 	productList = []

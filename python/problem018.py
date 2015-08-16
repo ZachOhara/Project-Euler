@@ -1,17 +1,8 @@
-
-FILE_ADDRESS = "../res/problem018/triangle.txt"
+from common import fileio
 
 def main():
-	print(getMaxSum(generateTriangle()))
-
-def generateTriangle():
-	triangle = []
-	for line in open(FILE_ADDRESS, 'r'):
-		row = []
-		for num in line[:-1].split(' '):
-			row.append(int(num))
-		triangle.append(row)
-	return triangle
+	fileio.FILE_ADDRESS = "../res/problem018/triangle.txt"
+	print(getMaxSum(fileio.readFileAsMatrix()))
 
 def getMaxSum(triangle):
 	sums = [[None] * len(line) for line in triangle]

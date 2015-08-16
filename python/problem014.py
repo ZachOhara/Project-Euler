@@ -1,4 +1,4 @@
-import common.MathUtil as MathUtil
+from common import mathutil
 
 def main():
 	print(longestSequence(1000000))
@@ -6,9 +6,9 @@ def main():
 def longestSequence(limit):
 	sequences = []
 	for i in range(1, limit):
-		#if i % 1000 == 0:
+		#if i % 5000 == 0:
 			#print(i)
-		sequences.append(len(MathUtil.collatzSequence(i)))
+		sequences.append(len(mathutil.collatzSequence(i)))
 	return sequences.index(max(sequences)) + 1
 
 if __name__ == '__main__':

@@ -1,12 +1,15 @@
+from common import fibonacci
 
-import common.mathUtil as mathUtil
-
+def main():
+	print(evenFibSum(4000000))
+	
 def evenFibSum(cap):
-	fibList = mathUtil.fibonacciTo(cap)
+	fibList = fibonacci.fibonacciTo(cap)
 	evenSum = 0
 	for i in fibList:
 		if i % 2 == 0:
 			evenSum += i 
 	return evenSum
 
-print(evenFibSum(4000000))
+if __name__ == "__main__":
+	main()

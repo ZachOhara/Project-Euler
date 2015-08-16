@@ -1,19 +1,4 @@
 
-def main_OLD():
-	firstSundays = 0
-	weekday = 1
-	month = 1
-	year = 1900
-	while year < 2001:	
-		if weekday == 0 and year >= 1901:
-			firstSundays += 1
-		month += 1
-		year += int(month / 12)
-		month %= 12
-		weekday += getDaysInMonth(month, year)
-		weekday %= 7
-	print(firstSundays)
-
 def main():
 	firstSundays = 0
 	weekday = 1

@@ -1,4 +1,7 @@
 
+def main():
+	print(sumMultiplesOf(3, 5, 1000))
+	
 def sumMultiplesOf(a, b, cap):
 	s = 0
 	for i in range(cap):
@@ -6,4 +9,5 @@ def sumMultiplesOf(a, b, cap):
 			s += i
 	return s
 
-print(sumMultiplesOf(3, 5, 1000))
+if __name__ == "__main__":
+	main()

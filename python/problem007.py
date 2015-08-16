@@ -1,7 +1,7 @@
-import common.MathUtil as MathUtil
+from common import primes
 
 def main():
-	print(MathUtil.generatePrimes(10001)[-1])
+	print(primes.primeTerms(10001)[-1])
 
 if __name__ == '__main__':
 	main()

@@ -13,6 +13,20 @@ def factorsOf(n):
 		div += 1
 	return factorList
 
+def properDivisorsOf(n):
+	factors = factorsOf(n)
+	factors.remove(n)
+	return factors
+
+def isPerfect(n):
+	return sum(properDivisorsOf(n)) == n
+
+def isDeficient(n):
+	return sum(properDivisorsOf(n)) < n
+
+def isAbundant(n):
+	return sum(properDivisorsOf(n)) > n
+
 def primeFactorsOf(n):
 	primeFactorList = factorsOf(n)
 	primeFactorList.remove(1)

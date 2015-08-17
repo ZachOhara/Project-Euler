@@ -18,6 +18,17 @@ def readFileAsList():
 		nums.append(int(line[:-1]))
 	return nums
 
+# Read a list of words as a list of strings
+def readFileAsStrList(sep="\n", quotes=False):
+	singleStr = ""
+	for line in open(FILE_ADDRESS, 'r'):
+		singleStr += line
+	strList = singleStr.split(sep)
+	if quotes:
+		for i in range(len(strList)):
+			strList[i] = strList[i][1:-1]
+	return strList
+
 # Read a file with only newline seperations as a single list of digits
 def readFileAsSequence():
 	seq = []

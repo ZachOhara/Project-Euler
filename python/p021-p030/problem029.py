@@ -5,7 +5,6 @@ def main():
 def termsForRange(rMin, rMax):
 	terms = []
 	for a in range(rMin, rMax + 1):
-		if not a % 50: print(a)
 		for b in range(rMin, rMax + 1):
 			t = a ** b
 			#if t not in terms:

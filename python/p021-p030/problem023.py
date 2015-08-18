@@ -1,7 +1,7 @@
 from common import fileio
 
 def main():
-	fileio.FILE_ADDRESS = "../res/problem023/abundantnumbers.txt"
+	fileio.FILE_ADDRESS = "../../res/problem023/abundantnumbers.txt"
 	abundantSumsList = fileio.readFileAsList()
 	print(len(abundantSumsList))
 	abundantIntegersSum = sum(abundantCombinationSums(abundantSumsList))

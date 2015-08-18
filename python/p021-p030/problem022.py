@@ -1,7 +1,7 @@
 from common import fileio
 
 def main():
-	fileio.FILE_ADDRESS = "../res/problem022/names.txt"
+	fileio.FILE_ADDRESS = "../../res/problem022/names.txt"
 	names = fileio.readFileAsStrList(sep=',', quotes=True)
 	scoreSum = 0
 	names.sort()

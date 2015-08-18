@@ -1,7 +1,7 @@
 from common import fileio
 
 def main():
-	fileio.FILE_ADDRESS = "../res/problem018/triangle.txt"
+	fileio.FILE_ADDRESS = "../../res/problem018/triangle.txt"
 	print(getMaxSum(fileio.readFileAsMatrix()))
 
 def getMaxSum(triangle):

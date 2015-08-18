@@ -2,7 +2,7 @@ from common import fileio
 
 def main():
 	ADJ = 4
-	fileio.FILE_ADDRESS = "../res/problem011/grid.txt"
+	fileio.FILE_ADDRESS = "../../res/problem011/grid.txt"
 	matrix = fileio.readFileAsMatrix()
 	products = []
 	products.extend(checkVertical(matrix, ADJ))

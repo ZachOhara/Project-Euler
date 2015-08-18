@@ -1,7 +1,7 @@
 from common import fileio
 
 def main():
-	fileio.FILE_ADDRESS = "../res/problem008/series.txt"
+	fileio.FILE_ADDRESS = "../../res/problem008/series.txt"
 	series = fileio.readFileAsSequence()
 	print(max(adjProducts(series, 13)))
 

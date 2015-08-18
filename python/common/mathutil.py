@@ -31,6 +31,19 @@ def sumOfDigits(n):
 		digitSum += int(c)
 	return digitSum
 
+def isPandigital(n):
+	n = str(n)
+	for i in range(1, 10):
+		c = n.count(str(i))
+		if not c:
+			return i - 1
+		if c > 1:
+			return 0
+	return 9
+
+def isPandigital9(n):
+	return len(str(n)) == 9 and isPandigital(n) == 9
+
 if __name__ == "__main__":
 	print(collatzSequence(13))
 		

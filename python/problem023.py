@@ -1,7 +1,5 @@
 from common import fileio
 
-# TODO: this solution is not verified to work perfectly
-
 def main():
 	fileio.FILE_ADDRESS = "../res/problem023/abundantnumbers.txt"
 	abundantSumsList = fileio.readFileAsList()

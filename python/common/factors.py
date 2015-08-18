@@ -18,6 +18,14 @@ def properDivisorsOf(n):
 	factors.remove(n)
 	return factors
 
+def gcd(a, b):
+	factorsA = factorsOf(a)
+	factorsB = factorsOf(b)
+	factorsA.sort()
+	for i in factorsA[::-1]:
+		if i in factorsB:
+			return i
+
 def isPerfect(n):
 	return sum(properDivisorsOf(n)) == n
 
@@ -28,6 +36,8 @@ def isAbundant(n):
 	return sum(properDivisorsOf(n)) > n
 
 def primeFactorsOf(n):
+	if primes.isPrime(n):
+		return [n]
 	primeFactorList = factorsOf(n)
 	primeFactorList.remove(1)
 	primeFactorList.remove(n)

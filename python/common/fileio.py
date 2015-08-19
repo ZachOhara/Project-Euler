@@ -36,3 +36,10 @@ def readFileAsSequence():
 		for char in line[:-1]:
 			seq.append(int(char))
 	return seq
+
+# Write an iterable object to a file
+def writeFileAsList(itr):
+	file = open(FILE_ADDRESS, 'w')
+	for i in itr:
+		file.write(str(i) + '\n')
+	file.close()

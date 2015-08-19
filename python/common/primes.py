@@ -1,7 +1,18 @@
+from common import fileio
 from common import mathutil
 
+PRIMES_FILE = "../../res/common/primes.txt"
+
 def main():
-	print()
+	writePrimes()
+	
+def readPrimes():
+	fileio.FILE_ADDRESS = PRIMES_FILE
+	return fileio.readFileAsList()
+
+def writePrimes():
+	fileio.FILE_ADDRESS = PRIMES_FILE
+	fileio.writeFileAsList(primesTo(10 ** 7))
 
 def primes():
 	i = 1
@@ -32,6 +43,7 @@ def atkinPrimes(limit):
 	primes = [2,3]
 	sieve= [False] *(limit+1)
 	for x in range(1, int(limit ** 0.5) + 1):
+		#if not x % 100: print(x, 'out of', int(limit ** 0.5) + 1)
 		for y in range(1, int(limit ** 0.5) + 1):
 			n = (4 * (x ** 2)) + (y ** 2)
 			if n <= limit and (n % 12 == 1 or n % 12 == 5):

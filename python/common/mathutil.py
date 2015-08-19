@@ -1,3 +1,6 @@
+import itertools
+
+DIGITS = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
 
 def containsFactor(itr, n):
 	for i in itr:
@@ -31,12 +34,18 @@ def sumOfDigits(n):
 		digitSum += int(c)
 	return digitSum
 
+def pandigitalNumbers(start=1, end=9):
+	available = DIGITS[start : end + 1]
+	return [int(''.join(p)) for p in itertools.permutations(available)]
+
 def isPandigital(n):
 	n = str(n)
 	for i in range(1, 10):
 		c = n.count(str(i))
 		if not c:
-			return i - 1
+			if len(n) == i - 1:
+				return i - 1
+			return 0
 		if c > 1:
 			return 0
 	return 9
@@ -45,5 +54,5 @@ def isPandigital9(n):
 	return len(str(n)) == 9 and isPandigital(n) == 9
 
 if __name__ == "__main__":
-	print(collatzSequence(13))
+	print(pandigitalNumbers(1, 5))
 		

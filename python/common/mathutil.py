@@ -10,6 +10,9 @@ def containsFactor(itr, n):
 
 def isPalindrome(x):
 	return str(x) == str(x)[::-1]
+
+def reverse(n):
+	return int(str(n)[::-1])
 	
 def isPythagorean(itr):
 	if len(itr) != 3:

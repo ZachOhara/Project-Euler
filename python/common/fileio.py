@@ -11,12 +11,23 @@ def readFileAsMatrix():
 		matrix.append(row)
 	return matrix
 
-# Read a list of numbers, seperated by newlines, 
+# Read a list of numbers, seperated by newlines
 def readFileAsList():
 	nums = []
 	for line in open(FILE_ADDRESS, 'r'):
 		nums.append(int(line[:-1]))
 	return nums
+
+# Read a matrix of strings, seperated by spaces and newlines, as a matrix
+# Exactly the same as readFileAsMatrix(), but does not convert to ints
+def readFileAsStrMatrix():
+	matrix = []
+	for line in open(FILE_ADDRESS, 'r'):
+		row = []
+		for num in line[:-1].split(' '):
+			row.append(num)
+		matrix.append(row)
+	return matrix
 
 # Read a list of words as a list of strings
 def readFileAsStrList(sep="\n", quotes=False):

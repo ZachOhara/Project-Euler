@@ -8,6 +8,9 @@ def containsFactor(itr, n):
 			return True
 	return False
 
+def isPower(n, power):
+	return round(n ** (1 / power)) ** power == n
+
 def isPalindrome(x):
 	return str(x) == str(x)[::-1]
 

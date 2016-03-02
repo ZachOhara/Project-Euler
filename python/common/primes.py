@@ -12,7 +12,7 @@ def readPrimes():
 
 def writePrimes():
 	fileio.FILE_ADDRESS = PRIMES_FILE
-	fileio.writeFileAsList(primesTo(10 ** 7))
+	fileio.writeFileAsList(primesTo(10 ** 8))
 
 def primes():
 	i = 1

@@ -1,0 +1,1 @@
+python3 -c "print('from p' + ('000' + str ((10 * int((int('$1') - 1) / 10)) + 1))[-3:] + '_p' + ('000' + str(10 * (int((int('$1') - 1) / 10) + 1)))[-3:] + '.problem' + ('000' + '$1')[-3:] + ' import *\nmain()')" | python3
